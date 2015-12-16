@@ -47,7 +47,7 @@ var createHorseListItem = function(horseData) {
 
 var loadRacecard = function(url) {
     var fullUrl = '/get-racecard' + '?racecard-url=' + url;
-    var horseList = $('.horse-list');
+    var horseList = $('.horse-list').empty();
     $.get(fullUrl, function (response) {
         var racecardData = response.racecard;
         for (var i = 0; i < racecardData.length; i++) {
